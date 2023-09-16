@@ -339,16 +339,50 @@ template {
 .slider{
   padding: 5% 10%;
 }
-
+.circle{
+  accent-color: white;
+  width: 5%;
+  height: 5%;
+  padding: 2%;
+}
 .slide{
   display: none;
+  animation: hides 2s;
 }
 #mem1:checked ~ .slide.slide1,
 #mem2:checked ~ .slide.slide2,
-#mem5:checked ~ .slide.slide5,
-#mem6:checked ~ .slide.slide6{
+#mem3:checked ~ .slide.slide3,
+#mem4:checked ~ .slide.slide4{
   display: block;
+  animation: shows 2s;
+}
+@keyframes shows{
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes hides{
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 .mem-img{
  width: 65vw;
+}
+@media screen and (max-width: 1034px){
+  .container{
+    margin: 0 5%;
+  }
+  .mem-img{
+    width: 80vw;
+   }
+   .slider{
+    padding: 3% 5%;
+  }
 }
