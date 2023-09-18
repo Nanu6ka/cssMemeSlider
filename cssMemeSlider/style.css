@@ -379,6 +379,7 @@ template {
 @media screen and (max-width: 1034px){
   .container{
     margin: 0 5%;
+    background-color: rgb(52, 51, 51);
   }
   .mem-img{
     width: 80vw;
